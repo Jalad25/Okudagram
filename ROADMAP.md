@@ -11,7 +11,7 @@ See [Milestones](https://github.com/Jalad25/okudagram/milestones) for currently 
 
 Planned for upcoming releases. Order is approximate and may change.
 
-> Nothing specifically planned yet. See currently scheduled for what's being worked on.
+- **Color palette adjustments** — soften the current palette and rebalance how individual colors are used across UI surfaces.
 
 ## Wishlist
 

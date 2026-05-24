@@ -7,7 +7,7 @@
 	<a href="https://community.obsidian.md/themes/okudagram"><img src="https://img.shields.io/badge/Obsidian-Install-7c3aed?logo=obsidian&logoColor=white"></a>
 </p>
 <p align="center">
-  <a href="https://community.obsidian.md/themes/okudagram"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Jalad25/okudagram/badges/okudagram-downloads.json&query=obsidian-downloads" alt="Obsidian Downloads"></a>
+  <a href="https://community.obsidian.md/themes/okudagram"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Jalad25/okudagram/badges/okudagram-downloads.json" alt="Obsidian Downloads"></a>
   <a href="https://github.com/jalad25/okudagram/releases"><img src="https://img.shields.io/github/downloads/Jalad25/okudagram/total?label=Assets%20Downloaded&logo=Github" alt="Assets downloaded"></a>
 </p>
 <p align="center">
