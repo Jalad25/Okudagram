@@ -1,0 +1,16 @@
+{
+  "sections": [
+	{
+		"name": "Palettes",
+		"type": "select",
+		"action": "apply-class-body",
+		"mode": "dark",
+		"options": [
+			{
+				"key": "Voyager",
+				"value": ".voyager"
+			}
+		]
+	}
+  ]
+}
