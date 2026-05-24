@@ -50,7 +50,7 @@ You can edit `theme.css` directly in your theme folder to tweak any values.
 
 All palette values live as CSS custom properties at the top of `theme.css`. Open the file to see and override them.
 
-> [!info] 
+> [!NOTE] 
 > Any changes you make there will be overwritten the next time the theme updates. For changes that survive updates, drop a CSS snippet with your overrides into `<your-vault>/.obsidian/snippets/` and enable it under *Settings → Appearance → CSS snippets*.
 
 ## Contributing
