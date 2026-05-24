@@ -22,7 +22,7 @@ Features being considered, but would like more feedback before pursuing. Order i
 
 ## Recently Shipped
 
-- [**0.1.0**](https://github.com/Jalad25/okudagram/releases/tag/0.1.0) — Initial release: dark theme supported.
+- [**1.0.0**](https://github.com/Jalad25/okudagram/releases/tag/0.1.0) — Initial release: dark theme supported.
 
 ## Out of Scope
 
