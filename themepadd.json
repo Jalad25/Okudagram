@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 1,
   "sections": [
     {
       "id": "palettes",
@@ -9,10 +8,12 @@
           "id": "palette",
           "type": "select",
           "label": "Color palette",
-          "apply": { "kind": "class", "selector": "body", "prefix": "okudagram-" },
+		  "description": "Choose a different, preset color palette."
+          "apply": { "kind": "class" },
+		  "scope": "dark",
           "options": [
-            { "id": "voyager", "label": "Voyager" },
-            { "id": "dsnine", "label": "DS9" }
+            { "value": "voyager", "label": "Voyager" },
+            { "value": "dsnine", "label": "DS9" }
           ]
         }
       ]
@@ -26,21 +27,21 @@
           "type": "color",
           "label": "Black",
           "scope": "dark",
-          "apply": { "kind": "cssVar", "name": "--okudagram-black" }
+          "apply": { "kind": "variable", "name": "--okudagram-black" }
         },
         {
           "id": "peach",
           "type": "color",
           "label": "Peach",
           "scope": "dark",
-          "apply": { "kind": "cssVar", "name": "--okudagram-peach" }
+          "apply": { "kind": "variable", "name": "--okudagram-peach" }
         },
         {
           "id": "amber",
           "type": "color",
           "label": "Amber",
           "scope": "dark",
-          "apply": { "kind": "cssVar", "name": "--okudagram-amber" }
+          "apply": { "kind": "variable", "name": "--okudagram-amber" }
         }
       ]
     }
