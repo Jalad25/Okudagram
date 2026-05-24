@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    {
+      "id": "palettes",
+      "label": "Palette",
+      "settings": [
+        {
+          "id": "palette",
+          "type": "select",
+          "label": "Color palette",
+          "apply": { "kind": "class", "selector": "body", "prefix": "okudagram-" },
+          "options": [
+            { "id": "voyager", "label": "Voyager" },
+            { "id": "dsnine", "label": "DS9" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "label": "Theme Default Colors",
+      "settings": [
+        {
+          "id": "black",
+          "type": "color",
+          "label": "Black",
+          "scope": "dark",
+          "apply": { "kind": "cssVar", "name": "--okudagram-black" }
+        },
+        {
+          "id": "peach",
+          "type": "color",
+          "label": "Peach",
+          "scope": "dark",
+          "apply": { "kind": "cssVar", "name": "--okudagram-peach" }
+        },
+        {
+          "id": "amber",
+          "type": "color",
+          "label": "Amber",
+          "scope": "dark",
+          "apply": { "kind": "cssVar", "name": "--okudagram-amber" }
+        }
+      ]
+    }
+  ]
+}
