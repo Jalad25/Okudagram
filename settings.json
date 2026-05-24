@@ -8,9 +8,9 @@
           "id": "palette",
           "type": "select",
           "label": "Color palette",
-		  "description": "Choose a different, preset color palette."
+		      "description": "Choose a different, preset color palette.",
           "apply": { "kind": "class" },
-		  "scope": "dark",
+		      "scope": "dark",
           "options": [
             { "value": "voyager", "label": "Voyager" },
             { "value": "dsnine", "label": "DS9" }
