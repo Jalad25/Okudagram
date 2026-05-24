@@ -1,0 +1,135 @@
+name: Bug report
+description: Report something that isn't working as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report. Please fill out the sections below so the issue can be reproduced and triaged quickly.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting.
+      options:
+        - label: I have searched [existing issues](../issues?q=is%3Aissue) and this has not already been reported.
+          required: true
+        - label: I am using the latest version of the theme.
+          required: true
+        - label: I am using Obsidian's dark color scheme. (Okudagram does not support light mode.)
+          required: true
+        - label: I am on Obsidian desktop. (Okudagram is not built for mobile.)
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+      placeholder: When I do X, Y happens instead of Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide a minimal, step-by-step path to reproduce the issue.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See the visual bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to see?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What did you actually see? Include any error messages or console output.
+    validations:
+      required: true
+
+  - type: input
+    id: theme-version
+    attributes:
+      label: Theme version
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: obsidian-version
+    attributes:
+      label: Obsidian version
+      placeholder: e.g. 1.7.4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where does the bug occur?
+      description: Which part of the Obsidian UI is affected? Pick all that apply.
+      multiple: true
+      options:
+        - Ribbon (left icon column)
+        - Titlebar / tabs
+        - File explorer / left sidebar
+        - Right sidebar
+        - Editor / note content
+        - Status bar
+        - Modals (settings, command palette, suggestion popups)
+        - Callouts
+        - Code blocks
+        - Tables
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: snippets
+    attributes:
+      label: CSS snippets enabled
+      description: Do you have any custom CSS snippets enabled under *Settings → Appearance → CSS snippets*? Try disabling them to see if the bug still occurs.
+    validations:
+      required: false
+
+  - type: textarea
+    id: other-plugins
+    attributes:
+      label: Other plugins enabled
+      description: Does the bug still occur with all community plugins disabled? List any plugins that seem related.
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or screen recording
+      description: For visual bugs, a screenshot is almost always the fastest way to communicate the problem.
+    validations:
+      required: false

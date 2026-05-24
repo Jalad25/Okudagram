@@ -1,0 +1,23 @@
+title: "[Show & Tell]: "
+labels: ["show-and-tell"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share how Okudagram looks in your vault! Screenshots of your setup, snippets you've layered on top, color customizations, or anything else you'd like to show off.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What are you sharing?
+      description: A quick summary of your setup or customization.
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Screenshots, CSS snippets, or step-by-step explanations welcome.
+    validations:
+      required: false
