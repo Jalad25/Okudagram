@@ -70,6 +70,14 @@ For more specific changes, you can use one of the specialized templates:
 - Avoid `:has`, unless absolutely necessary.
 - Dark mode only! See the note in the [README.md](README.md). Don't add `.theme-light` rules.
 
+## Theme PADD integration
+
+Okudagram ships with a `settings.json` so users can customize the palette through the [Theme PADD](https://community.obsidian.md/plugins/theme-padd) plugin without editing CSS. If you're contributing to the theme, please keep this integration intact:
+
+- **Do not remove or modify the `@themepadd` comment block at the top of `theme.css`.** Theme PADD parses this header to find the `settings.json` file in the repo. If it's removed, the plugin can no longer load customization options for users.
+- **Changes to `settings.json` must follow the spec at [Jalad25/theme-padd](https://github.com/Jalad25/theme-padd).** When adding new customizable variables or palette presets, refer to that repo for the supported schema (field types, `apply` kinds, etc.).
+- **If you add a new `--okudagram-*` palette variable**, also expose it in `settings.json` so users can customize it through Theme PADD. Conversely, if you rename or remove a palette variable, update `settings.json` accordingly so the plugin doesn't try to apply a stale variable name.
+
 ## License
 
 By contributing to this project you agree that your contributions will be licensed under the [GNU General Public License v3.0](LICENSE).

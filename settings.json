@@ -1,47 +1,92 @@
 {
-  "sections": [
+  "items": [
     {
-      "id": "palettes",
-      "label": "Palette",
-      "settings": [
-        {
-          "id": "palette",
-          "type": "select",
-          "label": "Color palette",
-		      "description": "Choose a different, preset color palette.",
-          "apply": { "kind": "class" },
-		      "scope": "dark",
-          "options": [
-            { "value": "voyager", "label": "Voyager" },
-            { "value": "dsnine", "label": "DS9" }
-          ]
-        }
+      "id": "palette",
+      "type": "select",
+      "label": "Theme Preset Palettes",
+      "description": "Choose a different, preset color palette.",
+      "apply": { "kind": "class" },
+      "options": [
+        { "value": "okudagram-voyager", "label": "Voyager" },
+        { "value": "okudagram-dsnine", "label": "DS9" }
       ]
     },
     {
       "id": "colors",
       "label": "Theme Default Colors",
-      "settings": [
+      "description": "Setting these colors will override palette changes as well.",
+      "inputFields": [
         {
           "id": "black",
           "type": "color",
           "label": "Black",
-          "scope": "dark",
+          "colorSpace": "hex",
+          "default": "#000000",
           "apply": { "kind": "variable", "name": "--okudagram-black" }
+        },
+        {
+          "id": "panel",
+          "type": "color",
+          "label": "Panel",
+          "colorSpace": "hex",
+          "default": "#111111",
+          "apply": { "kind": "variable", "name": "--okudagram-panel" }
         },
         {
           "id": "peach",
           "type": "color",
           "label": "Peach",
-          "scope": "dark",
+          "colorSpace": "hex",
+          "default": "#FF9966",
           "apply": { "kind": "variable", "name": "--okudagram-peach" }
+        },
+        {
+          "id": "beige",
+          "type": "color",
+          "label": "Beige",
+          "colorSpace": "hex",
+          "default": "#FFCC99",
+          "apply": { "kind": "variable", "name": "--okudagram-beige" }
+        },
+        {
+          "id": "lavender",
+          "type": "color",
+          "label": "Lavender",
+          "colorSpace": "hex",
+          "default": "#CC99CC",
+          "apply": { "kind": "variable", "name": "--okudagram-lavender" }
+        },
+        {
+          "id": "red",
+          "type": "color",
+          "label": "Red",
+          "colorSpace": "hex",
+          "default": "#CC6666",
+          "apply": { "kind": "variable", "name": "--okudagram-red" }
         },
         {
           "id": "amber",
           "type": "color",
           "label": "Amber",
-          "scope": "dark",
+          "colorSpace": "hex",
+          "default": "#FF9900",
           "apply": { "kind": "variable", "name": "--okudagram-amber" }
+        },
+        {
+          "id": "blue",
+          "type": "color",
+          "label": "Blue",
+          "colorSpace": "hex",
+          "default": "#99CCFF",
+          "apply": { "kind": "variable", "name": "--okudagram-blue" }
+        },
+        {
+          "id": "muted",
+          "type": "color",
+          "label": "Muted Lavender",
+          "colorSpace": "hex",
+          "default": "#9999CC",
+          "apply": { "kind": "variable", "name": "--okudagram-muted" }
         }
       ]
     }
