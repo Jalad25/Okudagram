@@ -1,92 +1,236 @@
 {
-  "items": [
+  "schemaVersion": 1,
+  "settingItems": [
     {
-      "id": "palette",
-      "type": "select",
-      "label": "Theme Preset Palettes",
-      "description": "Choose a different, preset color palette.",
-      "apply": { "kind": "class" },
-      "options": [
-        { "value": "okudagram-voyager", "label": "Voyager" },
-        { "value": "okudagram-dsnine", "label": "DS9" }
+      "type": "control",
+      "name": "Palette preset",
+      "desc": "Switch between the built-in Okudagram color variants.",
+      "control": {
+        "type": "dropdown",
+        "id": "palette-preset",
+        "defaultValue": "",
+        "options": {
+          "": "Default (TNG)",
+          "okudagram-voyager": "Voyager",
+          "okudagram-dsnine": "Deep Space Nine"
+        },
+        "onChange": {
+          "action": "set-class-from-list",
+          "classes": ["okudagram-voyager", "okudagram-dsnine"]
+        }
+      }
+    },
+    {
+      "type": "group",
+      "heading": "Palette colors",
+      "items": [
+        {
+          "type": "empty",
+          "name": "Custom palette overrides",
+          "desc": "Override individual palette colors. Changes here apply on top of the chosen preset."
+        },
+        {
+          "type": "control",
+          "name": "Black",
+          "desc": "Primary background and on-accent text.",
+          "control": {
+            "type": "color",
+            "id": "color-black",
+            "defaultValue": "#000000",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-black",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Panel",
+          "desc": "Secondary panel background.",
+          "control": {
+            "type": "color",
+            "id": "color-panel",
+            "defaultValue": "#111111",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-panel",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Peach",
+          "desc": "Primary accent (ribbon, titlebar, borders, H1).",
+          "control": {
+            "type": "color",
+            "id": "color-peach",
+            "defaultValue": "#FF9966",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-peach",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Beige",
+          "desc": "Muted text, nav-item-active, H2.",
+          "control": {
+            "type": "color",
+            "id": "color-beige",
+            "defaultValue": "#FFCC99",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-beige",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Lavender",
+          "desc": "Accent text, tab-active, H3.",
+          "control": {
+            "type": "color",
+            "id": "color-lavender",
+            "defaultValue": "#CC99CC",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-lavender",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Red",
+          "desc": "Error text, right-split tab.",
+          "control": {
+            "type": "color",
+            "id": "color-red",
+            "defaultValue": "#CC6666",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-red",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Amber",
+          "desc": "Normal text, status bar, H4.",
+          "control": {
+            "type": "color",
+            "id": "color-amber",
+            "defaultValue": "#FF9900",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-amber",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Blue",
+          "desc": "Callout info/todo, H5.",
+          "control": {
+            "type": "color",
+            "id": "color-blue",
+            "defaultValue": "#99CCFF",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-blue",
+              "clearMode": "remove"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Muted",
+          "desc": "Faint text, left-split tab, H6.",
+          "control": {
+            "type": "color",
+            "id": "color-muted",
+            "defaultValue": "#9999CC",
+            "colorSpace": "hex",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-muted",
+              "clearMode": "remove"
+            }
+          }
+        }
       ]
     },
     {
-      "id": "colors",
-      "label": "Theme Default Colors",
-      "description": "Setting these colors will override palette changes as well.",
-      "inputFields": [
+      "type": "group",
+      "heading": "Fonts",
+      "items": [
         {
-          "id": "black",
-          "type": "color",
-          "label": "Black",
-          "colorSpace": "hex",
-          "default": "#000000",
-          "apply": { "kind": "variable", "name": "--okudagram-black" }
+          "type": "empty",
+          "name": "Font families",
+          "desc": "Customize the font stacks. Use full CSS font-family syntax, e.g. 'Inter', 'Helvetica Neue', sans-serif."
         },
         {
-          "id": "panel",
-          "type": "color",
-          "label": "Panel",
-          "colorSpace": "hex",
-          "default": "#111111",
-          "apply": { "kind": "variable", "name": "--okudagram-panel" }
+          "type": "control",
+          "name": "Interface font",
+          "desc": "Used for UI text (menus, sidebar, status bar).",
+          "control": {
+            "type": "text",
+            "id": "font-interface",
+            "defaultValue": "'Antonio', 'Oswald', 'Bahnschrift', 'Helvetica Neue Condensed', 'Arial Narrow', sans-serif",
+            "placeholder": "'Antonio', sans-serif",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-font-interface",
+              "clearMode": "remove"
+            }
+          }
         },
         {
-          "id": "peach",
-          "type": "color",
-          "label": "Peach",
-          "colorSpace": "hex",
-          "default": "#FF9966",
-          "apply": { "kind": "variable", "name": "--okudagram-peach" }
+          "type": "control",
+          "name": "Editor font",
+          "desc": "Used for note body text.",
+          "control": {
+            "type": "text",
+            "id": "font-text",
+            "defaultValue": "'Antonio', 'Oswald', 'Bahnschrift', 'Helvetica Neue Condensed', 'Arial Narrow', sans-serif",
+            "placeholder": "'Antonio', sans-serif",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-font-text",
+              "clearMode": "remove"
+            }
+          }
         },
         {
-          "id": "beige",
-          "type": "color",
-          "label": "Beige",
-          "colorSpace": "hex",
-          "default": "#FFCC99",
-          "apply": { "kind": "variable", "name": "--okudagram-beige" }
-        },
-        {
-          "id": "lavender",
-          "type": "color",
-          "label": "Lavender",
-          "colorSpace": "hex",
-          "default": "#CC99CC",
-          "apply": { "kind": "variable", "name": "--okudagram-lavender" }
-        },
-        {
-          "id": "red",
-          "type": "color",
-          "label": "Red",
-          "colorSpace": "hex",
-          "default": "#CC6666",
-          "apply": { "kind": "variable", "name": "--okudagram-red" }
-        },
-        {
-          "id": "amber",
-          "type": "color",
-          "label": "Amber",
-          "colorSpace": "hex",
-          "default": "#FF9900",
-          "apply": { "kind": "variable", "name": "--okudagram-amber" }
-        },
-        {
-          "id": "blue",
-          "type": "color",
-          "label": "Blue",
-          "colorSpace": "hex",
-          "default": "#99CCFF",
-          "apply": { "kind": "variable", "name": "--okudagram-blue" }
-        },
-        {
-          "id": "muted",
-          "type": "color",
-          "label": "Muted Lavender",
-          "colorSpace": "hex",
-          "default": "#9999CC",
-          "apply": { "kind": "variable", "name": "--okudagram-muted" }
+          "type": "control",
+          "name": "Monospace font",
+          "desc": "Used for code blocks and inline code.",
+          "control": {
+            "type": "text",
+            "id": "font-monospace",
+            "defaultValue": "'JetBrains Mono', 'Fira Code', Consolas, monospace",
+            "placeholder": "'JetBrains Mono', monospace",
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--okudagram-font-monospace",
+              "clearMode": "remove"
+            }
+          }
         }
       ]
     }
